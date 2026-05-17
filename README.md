@@ -4,6 +4,8 @@ Postgres-backed (and SQLite-compatible) cache adapter for Go, implementing the [
 
 If you searched for "Postgres cache library Go", "SQL-backed cache Golang", "database cache adapter Go", or "durable cache without Redis" — this is the SQL backend of the `ubgo/cache` family. It passes the shared `cachetest.Run` conformance suite.
 
+> **Documentation:** a full per-feature cookbook with use cases and runnable snippets for every option, schema op, and method lives in [`docs/README.md`](docs/README.md).
+
 ## Why this adapter
 
 - **No new infrastructure.** If you run Postgres, you already have the cache store. One table, two indexes, `Migrate()` creates them.
