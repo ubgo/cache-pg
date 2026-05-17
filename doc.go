@@ -1,3 +1,18 @@
+// doc.go — canonical package documentation (package pgcache, github.com/ubgo/cache-pg).
+//
+// Package role: this file is the authoritative overview for the ubgo/cache
+// SQL adapter; start here before reading pgcache.go (the adapter).
+//
+// This file: holds ONLY the package doc comment below — no code. It records
+// the deviation from PLAN §4.9 (portable database/sql instead of Ent) and the
+// design invariants (one Postgres-syntax query set rebound for SQLite,
+// expires_at unix-nanos with NULL = no expiry, tx-guarded SetNX/Incr/Decr,
+// LIKE ESCAPE prefix ops, Close marks-closed-only) that pgcache.go implements.
+//
+// AI-context: the // Package … block below is the godoc package doc; do not
+// duplicate it (revive flags duplicate package comments). The blank line
+// after this header keeps it a file header, not a second package comment.
+
 // Package pgcache is the SQL adapter for github.com/ubgo/cache. It targets
 // Postgres 14+ in production but is driver-agnostic (it takes a *sql.DB), so
 // the conformance suite runs in-process on SQLite with no Docker.

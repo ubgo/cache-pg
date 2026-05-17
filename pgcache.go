@@ -1,3 +1,26 @@
+// pgcache.go — the database/sql cache.Cache adapter for Postgres/SQLite (package pgcache, github.com/ubgo/cache-pg).
+//
+// Package role: pgcache is the SQL adapter in the ubgo/cache family — a
+// durable, single-node cache for environments that already run Postgres (and
+// in-process SQLite for the conformance suite). See doc.go for the overview.
+//
+// This file: defines Dialect (Postgres/SQLite), Cache, the options, New,
+// Migrate, every cache.Cache method, plus the helpers rebind, now,
+// expiresParam and likeEscape. Invariants an AI must keep: queries are
+// authored ONCE in Postgres "$1,$2" syntax and rebind rewrites "$N" -> "?"
+// for SQLite (never fork query strings per dialect); expires_at is a BIGINT
+// of unix-nanoseconds with NULL = no expiry, and every read carries
+// "(expires_at IS NULL OR expires_at>now)" so an expired row is never served
+// before Vacuum physically deletes it; SetNX/Incr/Decr/SetMulti run in a
+// transaction (SetNX deletes a logically-expired-but-unvacuumed row first);
+// DeleteByPrefix/Iterate use LIKE … ESCAPE '\' with likeEscape so a literal
+// %/_/\ in the caller's prefix matches literally. Counters are a fixed
+// 8-byte big-endian int64 in the value column.
+//
+// AI-context: adapter-of-cache.Cache over *sql.DB; rebind is the single
+// dialect bridge, Vacuum is space reclamation only (never correctness), and
+// Close marks the adapter closed without closing the caller-owned *sql.DB.
+
 package pgcache
 
 import (

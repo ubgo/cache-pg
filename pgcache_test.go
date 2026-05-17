@@ -1,3 +1,5 @@
+// pgcache_test.go — tests for the pgcache adapter (conformance suite on in-memory SQLite, Migrate idempotency, Vacuum, Close).
+
 package pgcache_test
 
 import (
