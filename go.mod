@@ -3,7 +3,7 @@ module github.com/ubgo/cache-pg
 go 1.24
 
 require (
-	github.com/ubgo/cache v0.0.0-20260517103845-4c1126dd19ee
+	github.com/ubgo/cache v0.1.0
 	modernc.org/sqlite v1.34.4
 )
 

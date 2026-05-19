@@ -14,8 +14,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
 github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec/go.mod h1:qqbHyh8v60DhA7CoWK5oRCqLrMHRGoxYCSS9EjAz6Eo=
-github.com/ubgo/cache v0.0.0-20260517103845-4c1126dd19ee h1:9CiQnaxc54QHj6txLi7ITWHVkSR1/V+3jhpl/qAi9c0=
-github.com/ubgo/cache v0.0.0-20260517103845-4c1126dd19ee/go.mod h1:2Z6dYQnKqvklI06GfUpUxaopjTNay8wV5GYM+m1/zDk=
+github.com/ubgo/cache v0.1.0 h1:ZYgq8UJg9Xu7FTNFW3OWrSjFuEgeuTjTXUk4fL/Z7r4=
+github.com/ubgo/cache v0.1.0/go.mod h1:2Z6dYQnKqvklI06GfUpUxaopjTNay8wV5GYM+m1/zDk=
 golang.org/x/mod v0.16.0 h1:QX4fJ0Rr5cPQCF7O9lh9Se4pmwfwskqZfq5moyldzic=
 golang.org/x/mod v0.16.0/go.mod h1:hTbmBsO62+eylJbnUtE2MGJUyE7QWk4xUqPFrRgJ+7c=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
