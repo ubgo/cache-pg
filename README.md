@@ -1,6 +1,8 @@
 # ubgo/cache-pg — Postgres-backed cache for Go
 
-![coverage](https://img.shields.io/badge/coverage-98%25-brightgreen)
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/ubgo/cache-pg.svg)](https://pkg.go.dev/github.com/ubgo/cache-pg) [![Go Report Card](https://goreportcard.com/badge/github.com/ubgo/cache-pg)](https://goreportcard.com/report/github.com/ubgo/cache-pg) [![test](https://github.com/ubgo/cache-pg/actions/workflows/test.yml/badge.svg)](https://github.com/ubgo/cache-pg/actions/workflows/test.yml) [![lint](https://github.com/ubgo/cache-pg/actions/workflows/lint.yml/badge.svg)](https://github.com/ubgo/cache-pg/actions/workflows/lint.yml) ![coverage](https://img.shields.io/badge/coverage-98%25-brightgreen) [![tag](https://img.shields.io/github/v/tag/ubgo/cache-pg?sort=semver)](https://github.com/ubgo/cache-pg/tags) [![license](https://img.shields.io/badge/license-source--available-blue)](./LICENSE) ![Go](https://img.shields.io/badge/go-1.24-00ADD8?logo=go)
+
 
 Postgres-backed (and SQLite-compatible) cache adapter for Go, implementing the [`github.com/ubgo/cache`](https://github.com/ubgo/cache) contract over the standard library `database/sql`. A durable, single-table, codegen-free cache for teams that already run Postgres and would rather not add Redis just for caching.
 
