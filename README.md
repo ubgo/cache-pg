@@ -1,5 +1,7 @@
 # ubgo/cache-pg — Postgres-backed cache for Go
 
+![coverage](https://img.shields.io/badge/coverage-98%25-brightgreen)
+
 Postgres-backed (and SQLite-compatible) cache adapter for Go, implementing the [`github.com/ubgo/cache`](https://github.com/ubgo/cache) contract over the standard library `database/sql`. A durable, single-table, codegen-free cache for teams that already run Postgres and would rather not add Redis just for caching.
 
 If you searched for "Postgres cache library Go", "SQL-backed cache Golang", "database cache adapter Go", or "durable cache without Redis" — this is the SQL backend of the `ubgo/cache` family. It passes the shared `cachetest.Run` conformance suite.
